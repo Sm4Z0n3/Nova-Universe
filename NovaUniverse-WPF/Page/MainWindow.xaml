@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="890" Background="Black" Closing="Window_Closing" FontSize="16" MouseWheel="Main___MouseWheel">
+
+
+    <Grid MouseWheel="Main___MouseWheel">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" MouseWheel="Main___MouseWheel">
+            <Canvas MaxHeight="1080" MaxWidth="1920" x:Name="Main__" Margin="0,25,0,0" Loaded="Main___Loaded" MouseWheel="Main___MouseWheel">
+                <Canvas.LayoutTransform >
+                    <ScaleTransform x:Name="scaleTransform" ScaleX="0.9" ScaleY="0.9" />
+                </Canvas.LayoutTransform>
+            </Canvas>
+        </ScrollViewer>
+        <Button x:Name="New_BTN" Content="New Universe" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="123" Background="{x:Null}" Foreground="#FF989898" Click="New_BTN_Click"/>
+        <Button x:Name="Open_BTN" Content="Open Console" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="128" Background="{x:Null}" Foreground="#FF989898" Margin="152,0,0,0" Click="Open_BTN_Click"/>
+        <Button x:Name="TestAttack" Content="TestAttack" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="128" Background="{x:Null}" Foreground="#FF989898" Margin="317,0,0,0" Click="TestAttack_Click"/>
+    </Grid>
+</Window>
